@@ -1,9 +1,9 @@
 import React from "react";
-import './Person.css'
+import styles from './Person.module.css'
 
 const person = props => {
   return (
-    <div className="Person" >
+    <div className={styles.person} >
       <p onClick={props.click}>
         My name: {props.name} my age: {props.age}
       </p>

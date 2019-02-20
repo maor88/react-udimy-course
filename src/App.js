@@ -44,16 +44,9 @@ class App extends Component {
   };
 
   render() {
-    const style = {
-      backgroundColor: "green",
-      color: "white",
-      font: "inherit",
-      border: "1px solid blue",
-      padding: "8px",
-      cursor: "pointer",
-    };
-
     let persons = null;
+    let btnClass='';
+
     if (this.state.showPersons) {
       persons = (
         <div>
@@ -70,7 +63,7 @@ class App extends Component {
           })}
         </div>
       );
-      style.backgroundColor = "red";
+      btnClass = styles.Red;
     }
 
     const classes = [];
@@ -86,7 +79,7 @@ class App extends Component {
           <h1> Hello</h1>
           <p className={classes.join(" ")}> Style code!</p>
           <button
-            style={style}
+            className={btnClass}
             onClick={this.togglePersonsHandler.bind(this, "Default text")}
           >
             Toggle Persons
