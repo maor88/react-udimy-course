@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import "./App.css";
+import styles from "./App.module.css";
 import Person from "./Person/Person";
 
 class App extends Component {
@@ -82,7 +82,7 @@ class App extends Component {
     }
 
     return (
-        <div className="App">
+        <div className={styles.App}>
           <h1> Hello</h1>
           <p className={classes.join(" ")}> Style code!</p>
           <button
